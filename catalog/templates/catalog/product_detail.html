@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-        {% include "includes/inc_pre.html" %}
+        {% include "catalog/includes/inc_pre.html" %}
     </div>
 
     <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
@@ -23,14 +23,14 @@
         <div class="col-12 col-md-6 col-lg-4 mb-4">
             <div class="card mb-4 box-shadow" style="width: 100%;">
                 <div class="card-header">
-                    <h4 class="my-0 font-weight-normal">{{ product_x.name }}</h4>
+                    <h4 class="my-0 font-weight-normal">{{ object.name }}</h4>
                 </div>
                 <div class="card-body">
-                    <img src="{{ product_x.image | media_filter }}" class="card-img-top" alt="{{ product_x.name }}" style="width: 100%; height: auto;">
+                    <img src="{{ object.image | media_filter }}" class="card-img-top" alt="{{ object.name }}" style="width: 100%; height: auto;">
                     <ul class="list-unstyled mt-3 mb-4 text-start m-3">
-                        <li>- {{ product_x.description}}</li>
+                        <li>- {{ object.description}}</li>
                     </ul>
-                    <a href="#" type="button" class="btn btn-lg btn-block btn-outline-primary">Купить за {{ product_x.price }} ₽</a>
+                    <a href="#" type="button" class="btn btn-lg btn-block btn-outline-primary">Купить за {{ object.price }} ₽</a>
                 </div>
             </div>
         </div>
@@ -39,7 +39,7 @@
 
 
 <footer class="pt-4 my-md-5 pt-md-5 border-top">
-{% include "includes/inc_menu.html" %}
+{% include "catalog/includes/inc_menu.html" %}
 </footer>
 
 </body>

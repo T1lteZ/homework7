@@ -1,10 +1,10 @@
-{% extends "home.html" %}
+{% extends "catalog/home.html" %}
 {% block content %}
 {% load my_tags %}
 {% load static %}
 <div class="container">
         <div class="row text-center">
-            {% for product in products %}
+            {% for product in object_list %}
             <div class="col-3">
                 <div class="card mb-4 box-shadow">
                     <div class="card-header">
@@ -15,7 +15,9 @@
                         <ul class="list-unstyled mt-3 mb-4 text-start m-3">
                             <li>- {{ product.description|slice:":100" }}{% if product.description|length > 100 %}...{% endif %}</li>
                         </ul>
-                        <a type="button" class="btn btn-lg btn-block btn-outline-primary" href="{% url 'catalog:product' pk=product.pk %}">Купить за {{ product.price }}</a>
+                        <a type="button" class="btn btn-lg btn-block btn-outline-primary" href="{% url 'catalog:product_detail' pk=product.pk %}">
+                            Купить за {{ product.price }}
+                        </a>
                     </div>
                 </div>
             </div>
