@@ -1,0 +1,44 @@
+[
+{
+    "model": "catalog.category",
+    "pk": 5,
+    "fields": {
+        "name": "Apple",
+        "description": "продукты компании Apple"
+    }
+},
+{
+    "model": "catalog.category",
+    "pk": 6,
+    "fields": {
+        "name": "Sanc",
+        "description": "продукты компании Sanc"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 1,
+    "fields": {
+        "name": "Iphone 11",
+        "description": "Черный цвет, 128 гб",
+        "image": "",
+        "category": "Apple",
+        "price": 100000,
+        "created_at": "2025-02-12",
+        "updated_at": "2025-02-12"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 2,
+    "fields": {
+        "name": "Монитор Sanc",
+        "description": "Черный цвет, 165 гц",
+        "image": "",
+        "category": "Sanc",
+        "price": 18000,
+        "created_at": "2025-02-12",
+        "updated_at": "2025-02-12"
+    }
+}
+]
